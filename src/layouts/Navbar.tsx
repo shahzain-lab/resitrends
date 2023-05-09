@@ -44,6 +44,7 @@ const Navbar = () => {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
+
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
               <Image 
                src='/assets/home/logo.webp'
@@ -58,6 +59,7 @@ const Navbar = () => {
           </Flex>
   
           <Stack
+
             // flex={{ base: 0, md: 1 }}
             justify={'flex-end'}
             direction={'row'}
@@ -72,6 +74,7 @@ const Navbar = () => {
               href={'#'}>
               Sign In
             </Button>
+
             <Button
               as={'a'}
               display={{ base: 'flex', md: 'inline-flex' }}

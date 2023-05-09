@@ -1,4 +1,5 @@
 import React from 'react'
+
 // chakra-ui
 import { Center, Stack, Heading } from '@chakra-ui/react'
 import { SimpleGrid, Box, Text, Icon, Flex } from '@chakra-ui/react'
@@ -16,6 +17,7 @@ const Services = () => {
         <Heading pb={16}>
            Everything you need to get ahead
         </Heading>
+
         <SimpleGrid mb={24} p={6} columns={2} gap={6}>
             <Box 
               position={'relative'}
@@ -30,6 +32,7 @@ const Services = () => {
                   borderRadius={'10px'}
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
+
                 <Image
                   src={'/assets/home/4156512.png'}
                   alt="mockup"
@@ -40,6 +43,7 @@ const Services = () => {
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
             </Box>
+
             <Box>
                 {features.slice(0, 2).map((feat, i) => (
                     <Flex 
@@ -59,9 +63,12 @@ const Services = () => {
                             p={2}
                             color={'brand.primary'}
                         />
+
                         <div>
                             <Heading pb={.5} size={'md'}>{feat.title}</Heading>
+
                             <Text size={'sm'} noOfLines={3}>{feat.desc}</Text>
+
                             <Link href={'#'} style={{display: 'flex', alignItems:'center', color: '#cd121b', fontWeight: 'bold'}}>Learn More 
                             <Icon
                             as={BsArrowRight}
@@ -78,6 +85,7 @@ const Services = () => {
                 ))}
             </Box>
         </SimpleGrid>
+
         <SimpleGrid p={6} columns={2} gap={6}>
             <Box pl={10}>
                 {features.slice(2).map((feat, i) => (
@@ -98,9 +106,12 @@ const Services = () => {
                             p={2}
                             color={'brand.primary'}
                         />
+
                         <div>
                             <Heading pb={.5} size={'md'}>{feat.title}</Heading>
+
                             <Text size={'sm'} noOfLines={3}>{feat.desc}</Text>
+
                             <Link href={'#'} style={{display: 'flex', alignItems:'center', color: '#cd121b', fontWeight: 'bold'}}>Learn More 
                             <Icon
                             as={BsArrowRight}
@@ -116,6 +127,7 @@ const Services = () => {
                     </Flex>
                 ))}
             </Box>
+
             <Box 
               position={'relative'}
               display={'flex'}
@@ -129,6 +141,7 @@ const Services = () => {
                   borderRadius={'10px'}
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
+
                 <Image
                   src={'/assets/home/3152837.png'}
                   alt="mockup"

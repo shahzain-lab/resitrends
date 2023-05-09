@@ -6,6 +6,7 @@ const index = () => {
   return (
     <div>
         <Header />
+
         <Services />
     </div>
   )

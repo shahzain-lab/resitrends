@@ -14,19 +14,23 @@ const Footer = () => {
             height={91}
               />
         </Flex>
+
         <Stack>
             <Heading>Our Locations</Heading>
+
             <Flex pt={4} justifyContent={'space-between'}>
             <UnorderedList>
                 {locations.slice(0, 7).map((loc) => (
                     <ListItem key={loc}>{loc}</ListItem>
                     ))}
               </UnorderedList>
+
               <UnorderedList px={20}>
                 {locations.slice(7, 14).map((loc) => (
                     <ListItem key={loc}>{loc}</ListItem>
                 ))}
                 </UnorderedList>
+
               <UnorderedList>
                 {locations.slice(14).map((loc) => (
                     <ListItem key={loc}>{loc}</ListItem>
@@ -34,9 +38,12 @@ const Footer = () => {
             </UnorderedList>
             </Flex>
         </Stack>
+
         <Stack pt={6}>
          <Input placeholder='Your Email' />
+
          <Textarea placeholder='Enter Your Message...' />
+
          <Button 
          bg='brand.primary' 
          color='white'

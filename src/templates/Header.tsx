@@ -7,10 +7,18 @@ const Header = () => {
   return (
     <Flex>
         <Stack pl={20} pt={20}>
-           <Heading as='h2' size='2xl'>PROPERTY SERVICES, <br /> <span style={{ color: '#cd121b' }}>SIMPLIFIED.</span> </Heading>
+           <Heading as='h2' size='2xl'>PROPERTY SERVICES, <br /> 
+
+           <span style={{ color: '#cd121b' }}>SIMPLIFIED.</span> 
+           </Heading>
+
            <Text>The Resitrend platform connects property owners <br />
+
             to a nationwide network of vetted professionals <br />
-             for renovation, maintenance and turn services. <br /> At scale. Every time.</Text>
+
+             for renovation, maintenance and turn services. <br /> 
+             At scale. Every time.</Text>
+
              <Link href={'/dashboard'}>
                 <Button
                   bg='#cd121b'
@@ -20,6 +28,7 @@ const Header = () => {
                   }}>Become a Resitrend pro</Button>
              </Link>
         </Stack>
+
         <Stack h={'100vh'} w={'100%'} position={'relative'}>
           <Stack h={'100vh'} w={'100%'}>
             <Stack 
@@ -31,8 +40,10 @@ const Header = () => {
               w={'100%'}
               h={'100%'}
              ></Stack>
+
             <Stack clipPath={'circle(15% at 50% 32%)'} bg={'#1c50a833'} w={'100%'} h={'100%'}></Stack>
          </Stack>
+
             <Image 
               src="/assets/home/asese.png"
               alt="Resitrend's construction"
@@ -45,6 +56,7 @@ const Header = () => {
               borderRadius={6}
               zIndex={1}
             />
+
             <Image 
               src="/assets/home/ideas.jpg"
               alt="Resitrend's ideas"

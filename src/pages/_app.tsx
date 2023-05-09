@@ -78,7 +78,6 @@ const App = (props: ExtendedAppProps) => {
 
   const publicRoutes = ['/'];
   const router = useRouter();
-  console.log('ROUTER => ', router)
 
   return (
     <div>
@@ -106,11 +105,15 @@ const App = (props: ExtendedAppProps) => {
         </SettingsProvider>
       </CacheProvider>
      )}
+
       {publicRoutes.includes(router.pathname) && 
         <ChakraProvider>
            <Navbar />
+
              <Component {...pageProps} />
+
              <Divider />
+
             <Footer />
         </ChakraProvider>
       }

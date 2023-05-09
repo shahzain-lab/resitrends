@@ -30,6 +30,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             color={useColorModeValue('gray.600', 'gray.200')}>
             {label}
           </Text>
+
           {children && (
             <Icon
               as={BsArrowRight}

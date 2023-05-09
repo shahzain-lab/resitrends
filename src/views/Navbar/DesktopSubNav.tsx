@@ -28,8 +28,10 @@ import {
               fontWeight={500}>
               {label}
             </Text>
+
             <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>
+
           <Flex
             transition={'all .3s ease'}
             transform={'translateX(-10px)'}

@@ -38,6 +38,7 @@ const DesktopNav = () => {
                     color: linkHoverColor,
                   }}>
                   {navItem.label}
+
                   {navItem.children && (
                     <Icon
                       as={RxCaretDown}
