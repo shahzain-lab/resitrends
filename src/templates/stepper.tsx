@@ -5,6 +5,7 @@ import { Step, Steps, useSteps } from "chakra-ui-steps";
 import PersonalDetails from "./businessInformation";
 import Billing from "./Billing";
 import Review from "./Review";
+import Link from "next/link";
 
 const steps = [{ label: "Business Information" }, { label: "Billing" }, { label: "Finish" }];
 
