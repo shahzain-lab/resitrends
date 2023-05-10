@@ -18,26 +18,26 @@ export const NAV_ITEMS: Array<NavItem> = [
       ],
     },
     {
-      label: 'Find Work',
+      label: 'Product',
       children: [
         {
-          label: 'Job Board',
+          label: 'Industrial ',
           subLabel: 'Find your dream design job',
           href: '#',
         },
         {
-          label: 'Freelance Projects',
+          label: 'Projects Management',
           subLabel: 'An exclusive list for contract work',
           href: '#',
         },
       ],
     },
     {
-      label: 'Learn Design',
+      label: 'Pricing',
       href: '#',
     },
     {
-      label: 'Hire Designers',
+      label: 'Help & Support',
       href: '#',
     },
   ];

@@ -45,7 +45,7 @@ const Footer = () => {
         </Flex>
 
         <Stack>
-            <Heading size={'md'}>Company</Heading>
+            <Heading pt={{base: 4, lg: 0}} size={'md'}>Company</Heading>
 
             <Flex pt={4} wrap={'wrap'} justifyContent={'space-between'}>
             <UnorderedList>
@@ -57,7 +57,7 @@ const Footer = () => {
         </Stack>
 
         <Stack>
-            <Heading size={'md'}>Product</Heading>
+            <Heading pt={{base: 4, lg: 0}} size={'md'}>Product</Heading>
 
             <Flex pt={4} wrap={'wrap'} justifyContent={'space-between'}>
             <UnorderedList>

@@ -33,17 +33,14 @@ const Navbar = () => {
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-
-          // align={'end'}
+          gap={4}
           alignItems={'end'}
           columns={{base: 3, lg: 2}}
           >
-          <Flex
-            flex={{ base: 1, md: 'auto' }}
+            <IconButton
+            justifySelf={'baseline'}
             ml={{ base: -2 }}
             display={{ base: 'flex', lg: 'none' }}
-            >
-            <IconButton
               onClick={onToggle}
               icon={
                 isOpen ? <RxCross1 /> : <HiOutlineMenuAlt2 />
@@ -51,14 +48,13 @@ const Navbar = () => {
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
             />
-          </Flex>
 
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', lg: 'start' }}>
+          <Flex ml={-15} flex={{ base: 1 }} justify={{ base: 'center', lg: 'start' }}>
               <Image 
                src='/assets/home/logo.webp'
                alt='Dan Abramov'
                width={167}
-               height={isLargerThan960 ? 78 : 91}
+               height={isLargerThan960 ? 65 : 91}
                />
   
             <Flex display={{ base: 'none', lg: 'flex' }} ml={10}>
@@ -67,8 +63,6 @@ const Navbar = () => {
           </Flex>
   
           <Stack
-
-            // flex={{ base: 0, md: 1 }}
             justify={'flex-end'}
             direction={'row'}
             pb={2}
@@ -79,10 +73,8 @@ const Navbar = () => {
                   fontSize={'sm'}
                   fontWeight={400}
                   variant={'link'}
-                  href={'#'}>
-              <Link href={'/pages/login'}>
+                  href={'/pages/login'}>
                   Sign In
-              </Link>
                 </Button>
 
             <Button
@@ -92,13 +84,12 @@ const Navbar = () => {
               fontWeight={600}
               color={'white'}
               bg={'brand.primary'}
-              href={'#'}
+              href={"/joinresitrend"}
+              minWidth={100}
               _hover={{
                 bg: 'red.700',
               }}>
-                <Link href="/joinresitrend">
                     Join Resitrend
-                </Link>
             </Button>
           </Stack>
         </SimpleGrid>
