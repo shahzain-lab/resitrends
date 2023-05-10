@@ -1,12 +1,10 @@
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Box } from "@chakra-ui/layout";
-import { Button, Flex, Heading } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { Step, Steps, useSteps } from "chakra-ui-steps";
 import PersonalDetails from "./businessInformation";
 import Billing from "./Billing";
 import Review from "./Review";
-import Link from "next/link";
-import { useMediaQuery } from "@mui/material";
 
 const steps = [{ label: "Business Information" }, { label: "Billing" }, { label: "Finish" }];
 

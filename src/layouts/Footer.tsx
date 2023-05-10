@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Heading, UnorderedList, ListItem, Stack, Button, Input, Textarea, Divider, Icon } from '@chakra-ui/react'
 import Image from '@/views/Customs/Image'
- import {  AiOutlineInstagram } from 'react-icons/ai';
+ import {  AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -14,13 +14,34 @@ const Footer = () => {
             height={91}
               />
 
-              <Divider />
+              <Divider my={2} />
 
+<Flex>
+            <a
+              target='_blank'
+              href={'https://www.instagram.com/resitrend_co/'}
+              >
               <Icon
+              color={'brand.secondary'}
               as={AiOutlineInstagram}
+              width={8}
+              height={8}
+              />
+            </a>
+
+            <a
               target='_blank'
               href={'https://www.linkedin.com/company/resitrend/'}
+            >
+              <Icon
+              ml={4}
+              color={'brand.secondary'}
+              as={AiFillLinkedin}
+              width={8}
+              height={8}
             />
+            </a>
+</Flex>
         </Flex>
 
         <Stack>
