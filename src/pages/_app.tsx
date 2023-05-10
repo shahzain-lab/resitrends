@@ -16,7 +16,6 @@ import type { EmotionCache } from '@emotion/cache'
 import { ChakraProvider, Divider, extendTheme } from '@chakra-ui/react'
 import { StepsTheme as Steps } from "chakra-ui-steps";
 
-
 // ** Config Imports
 import themeConfig from 'src/configs/themeConfig'
 

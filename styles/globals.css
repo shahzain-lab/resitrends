@@ -22,3 +22,40 @@ code:not([class*='language-']):after {
 code[class*='language-'] {
   padding: 0;
 }
+
+
+.rcw-launcher {
+  background-color: #1a3665 !important;
+  display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 20px !important;
+  }
+  
+  .rcw-close-button {
+  background-color: #1a3665 !important;
+  display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 20px !important;
+
+}
+
+.rcw-message-text {
+  background-color: #1a3665 !important;
+  color: white !important;
+
+}
+
+.rcw-send {
+  z-index: 1 !important;
+}
+
+.rcw-header {
+  background-color: #1a3665 !important;
+}
+
+.rcw-message > .rcw-response {
+  background-color: black !important;
+  color: white !important;
+}

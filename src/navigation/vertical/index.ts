@@ -88,6 +88,7 @@ const navigation = (): VerticalNavItemsType => {
       path: '/pages/error',
       openInNewTab: true
     },
+
     // {
     //   sectionTitle: 'User Interface'
     // },
