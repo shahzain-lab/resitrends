@@ -20,36 +20,33 @@ const FooterContent = () => {
 
         {` by `}
 
-        <Link target='_blank' href='https://themeselection.com/'>
-          ThemeSelection
+        <Link target='_blank' href='https://resitrend.com/'>
+         Resitrend
         </Link>
       </Typography>
 
       {hidden ? null : (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', '& :not(:last-child)': { mr: 4 } }}>
           <Link
-            target='_blank'
-            href='https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free/blob/main/LICENSE'
+            href='/dashboard'
           >
-            MIT License
+            Privacy Policy
           </Link>
 
-          <Link target='_blank' href='https://themeselection.com/'>
-            More Themes
+          <Link href='/dashboard'>
+            Term & Services
           </Link>
 
           <Link
-            target='_blank'
-            href='https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free/blob/main/README.md'
-          >
-            Documentation
-          </Link>
-
-          <Link
-            target='_blank'
-            href='https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free/issues'
+            href='/dashboard'
           >
             Support
+          </Link>
+
+          <Link
+            href='/dashboard'
+          >
+            Faqs
           </Link>
         </Box>
       )}

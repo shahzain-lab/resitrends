@@ -13,7 +13,9 @@ import { CacheProvider } from '@emotion/react'
 import type { EmotionCache } from '@emotion/cache'
 
 // ** Chakra-ui Imports
-import { ChakraProvider, Divider } from '@chakra-ui/react'
+import { ChakraProvider, Divider, extendTheme } from '@chakra-ui/react'
+import { StepsTheme as Steps } from "chakra-ui-steps";
+
 
 // ** Config Imports
 import themeConfig from 'src/configs/themeConfig'
@@ -69,6 +71,32 @@ const ThemeComponent = dynamic(
   { ssr: false }
 )
 
+// ** Extend the theme to include custom colors, fonts, etc
+const colors = {
+  brand: {
+    primary: '#cd121b',
+    secondary: '#1a3665'
+  },
+}
+
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+  '3xl': '2100px'
+}
+
+
+export const chakraTheme = extendTheme({
+  colors,
+  breakpoints,
+  components: {
+  Steps,
+ }
+})
+
 // ** Configure JSS & ClassName
 const App = (props: ExtendedAppProps) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
@@ -76,7 +104,7 @@ const App = (props: ExtendedAppProps) => {
   // Variables
   const getLayout = Component.getLayout ?? (page => <UserLayout>{page}</UserLayout>)
 
-  const publicRoutes = ['/'];
+  const publicRoutes = ['/', '/joinresitrend'];
   const router = useRouter();
 
   return (
@@ -107,7 +135,8 @@ const App = (props: ExtendedAppProps) => {
      )}
 
       {publicRoutes.includes(router.pathname) && 
-        <ChakraProvider>
+      router.pathname !== (publicRoutes[1]) && 
+        <ChakraProvider theme={chakraTheme}>
            <Navbar />
 
              <Component {...pageProps} />
@@ -115,6 +144,12 @@ const App = (props: ExtendedAppProps) => {
              <Divider />
 
             <Footer />
+        </ChakraProvider>
+      }
+
+      { router.pathname == (publicRoutes[1])  && 
+        <ChakraProvider theme={chakraTheme}>
+             <Component {...pageProps} />
         </ChakraProvider>
       }
     </div>

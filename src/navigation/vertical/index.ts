@@ -9,6 +9,12 @@ import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
 import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
+import mdiChatQuestionOutline from 'mdi-material-ui/ChatQuestionOutline'
+import Bell from 'mdi-material-ui/Bell'
+import ChartPie from 'mdi-material-ui/ChartPie'
+import FileDocumentEdit from 'mdi-material-ui/FileDocumentEdit'
+import Lightbulb from 'mdi-material-ui/Lightbulb'
+import ProjectorScreen from 'mdi-material-ui/ProjectorScreen'
 
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
@@ -18,12 +24,48 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Dashboard',
       icon: HomeOutline,
-      path: '/'
+      path: '/dashboard'
+    },
+    {
+      title: 'Projects',
+      icon: ProjectorScreen,
+      path: '/projects',
+      disabled: true
+    },
+    {
+      title: 'Inventory',
+      icon: Lightbulb,
+      path: '/inventory',
+      disabled: true
+    },
+    {
+      title: 'Contracts',
+      icon: FileDocumentEdit,
+      path: '/contracts',
+      disabled: true
+    },
+    {
+      title: 'Report & Graphs',
+      icon: ChartPie,
+      path: '/report',
+      disabled: true
+    },
+    {
+      title: 'Notification',
+      icon: Bell,
+      path: '/notification',
+      disabled: true
     },
     {
       title: 'Account Settings',
-      icon: AccountCogOutline,
+      icon: mdiChatQuestionOutline,
       path: '/account-settings'
+    },
+    {
+      title: 'Help & Supports',
+      icon: AccountCogOutline,
+      path: '/report',
+      disabled: true
     },
     {
       sectionTitle: 'Pages'
@@ -50,11 +92,6 @@ const navigation = (): VerticalNavItemsType => {
       sectionTitle: 'User Interface'
     },
     {
-      title: 'Typography',
-      icon: FormatLetterCase,
-      path: '/typography'
-    },
-    {
       title: 'Icons',
       path: '/icons',
       icon: GoogleCirclesExtended
@@ -68,6 +105,12 @@ const navigation = (): VerticalNavItemsType => {
       title: 'Tables',
       icon: Table,
       path: '/tables'
+    },
+    
+    {
+      title: 'Typography',
+      icon: FormatLetterCase,
+      path: '/typography'
     },
     {
       icon: CubeOutline,

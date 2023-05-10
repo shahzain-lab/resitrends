@@ -7,20 +7,24 @@ import {
     Collapse,
     useColorModeValue,
     useDisclosure,
-    IconButton
+    useMediaQuery,
+    IconButton,
+    SimpleGrid
   } from '@chakra-ui/react';
 import DesktopNav from '@/views/Navbar/DesktopNav';
 import MobileNav from '@/views/Navbar/MobileNav';
 import Image from '@/views/Customs/Image';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { RxCross1 } from 'react-icons/rx'
+import Link from 'next/link';
 
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
+    const [isLargerThan960] = useMediaQuery('(max-width: 960px)')
 
     return (
-      <Box>
-        <Flex
+      <Stack>
+        <SimpleGrid
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
@@ -29,11 +33,15 @@ const Navbar = () => {
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'end'}>
+
+          // align={'end'}
+          alignItems={'end'}
+          columns={{base: 3, lg: 2}}
+          >
           <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
-            display={{ base: 'flex', md: 'none' }}
+            display={{ base: 'flex', lg: 'none' }}
             >
             <IconButton
               onClick={onToggle}
@@ -45,15 +53,15 @@ const Navbar = () => {
             />
           </Flex>
 
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', lg: 'start' }}>
               <Image 
                src='/assets/home/logo.webp'
                alt='Dan Abramov'
                width={167}
-               height={91}
+               height={isLargerThan960 ? 78 : 91}
                />
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex display={{ base: 'none', lg: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
@@ -65,19 +73,21 @@ const Navbar = () => {
             direction={'row'}
             pb={2}
             spacing={6}>
-            <Button
-              as={'a'}
-              display={{ base: 'none', md: 'flex' }}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Sign In
-            </Button>
+                <Button
+                  as={'a'}
+                  display={{ base: 'none', lg: 'flex' }}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  href={'#'}>
+              <Link href={'/pages/login'}>
+                  Sign In
+              </Link>
+                </Button>
 
             <Button
               as={'a'}
-              display={{ base: 'flex', md: 'inline-flex' }}
+              display={{ base: 'flex', lg: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
@@ -86,15 +96,17 @@ const Navbar = () => {
               _hover={{
                 bg: 'red.700',
               }}>
-              Join Resitrend
+                <Link href="/joinresitrend">
+                    Join Resitrend
+                </Link>
             </Button>
           </Stack>
-        </Flex>
+        </SimpleGrid>
   
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
-      </Box>
+      </Stack>
     );
 }
 

@@ -68,7 +68,7 @@ const TabInfo = () => {
               fullWidth
               label='Website'
               placeholder='https://example.com/'
-              defaultValue='https://themeselection.com/'
+              defaultValue='https://resitrend.com/'
             />
           </Grid>
 

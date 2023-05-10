@@ -13,10 +13,10 @@ import CardContent from '@mui/material/CardContent'
 
 // ** Icons Imports
 import TrendingUp from 'mdi-material-ui/TrendingUp'
-import CurrencyUsd from 'mdi-material-ui/CurrencyUsd'
 import DotsVertical from 'mdi-material-ui/DotsVertical'
-import CellphoneLink from 'mdi-material-ui/CellphoneLink'
-import AccountOutline from 'mdi-material-ui/AccountOutline'
+import Terrain from 'mdi-material-ui/Terrain'
+import Landslide from 'mdi-material-ui/Landslide'
+import Wall from 'mdi-material-ui/Wall'
 
 // ** Types
 import { ThemeColor } from 'src/@core/layouts/types'
@@ -30,28 +30,28 @@ interface DataType {
 
 const salesData: DataType[] = [
   {
-    stats: '245k',
-    title: 'Sales',
+    stats: '245T',
+    title: 'Cement',
     color: 'primary',
     icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
   },
   {
-    stats: '12.5k',
-    title: 'Customers',
+    stats: '200T',
+    title: 'Bricks',
     color: 'success',
-    icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
+    icon: <Wall sx={{ fontSize: '1.75rem' }} />
   },
   {
-    stats: '1.54k',
+    stats: '10.54T',
     color: 'warning',
-    title: 'Products',
-    icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
+    title: 'Coarse Aggregates',
+    icon: <Landslide sx={{ fontSize: '1.75rem' }} />
   },
   {
-    stats: '$88k',
+    stats: '14T',
     color: 'info',
-    title: 'Revenue',
-    icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
+    title: 'Fine Aggregates',
+    icon: <Terrain sx={{ fontSize: '1.75rem' }} />
   }
 ]
 
@@ -87,7 +87,7 @@ const StatisticsCard = () => {
   return (
     <Card>
       <CardHeader
-        title='Statistics Card'
+        title='Component Delivered'
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
             <DotsVertical />

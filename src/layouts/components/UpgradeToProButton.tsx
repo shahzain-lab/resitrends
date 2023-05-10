@@ -44,7 +44,7 @@ const BuyNowButton = () => {
         onMouseEnter={handleOpen}
         onMouseLeave={handleClose}
         ref={(e: any) => setReferenceElement(e)}
-        href='https://themeselection.com/products/materio-mui-react-nextjs-admin-template/'
+        href='/dashboard'
         sx={{
           backgroundColor: '#ff3e1d',
           boxShadow: '0 1px 20px 1px #ff3e1d',
@@ -54,7 +54,7 @@ const BuyNowButton = () => {
           }
         }}
       >
-        Upgrade To Pro
+        Become Resitrend Pro
       </Button>
 
       <Fade in={open} timeout={700}>
@@ -70,19 +70,18 @@ const BuyNowButton = () => {
             <a
               target='_blank'
               rel='noreferrer'
-              href='https://themeselection.com/products/materio-mui-react-nextjs-admin-template/'
+              href='/dashboard'
             >
               <img width='100%' alt='materio-pro-banner' src='/images/misc/materio-pro-banner.png' />
             </a>
 
             <CardContent>
               <Typography sx={{ mb: 4 }} variant='h6'>
-                Materio - React Admin Template
+                Resitrend - Admin Portal
               </Typography>
 
               <Typography sx={{ mb: 4 }} variant='body2'>
-                Materio Admin is the most developer friendly & highly customizable Admin Dashboard Template based on MUI
-                and NextJS.
+                Manage contracts and progress reports on one single contract management software
               </Typography>
 
               <Typography sx={{ mb: 4 }} variant='body2'>
@@ -92,9 +91,8 @@ const BuyNowButton = () => {
               <Button
                 component='a'
                 sx={{ mr: 4 }}
-                target='_blank'
                 variant='contained'
-                href='https://demos.themeselection.com/materio-mui-react-nextjs-admin-template/landing/'
+                href='/dashboard'
               >
                 Demo
               </Button>
@@ -103,7 +101,7 @@ const BuyNowButton = () => {
                 component='a'
                 target='_blank'
                 variant='outlined'
-                href='https://themeselection.com/products/materio-mui-react-nextjs-admin-template/'
+                href='/dashboard'
               >
                 Download
               </Button>

@@ -33,6 +33,9 @@ import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
 
+// ** Custom Import
+import Image from '@/views/Customs/Image'
+
 // ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
@@ -90,7 +93,14 @@ const LoginPage = () => {
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg
+          <Image
+            src="/assets/home/logo.webp"
+            alt="Resitrends dashboard"
+            width={140}
+            height={80}
+          />
+
+            {/* <svg
               width={35}
               height={29}
               version='1.1'
@@ -167,7 +177,7 @@ const LoginPage = () => {
               }}
             >
               {themeConfig.templateName}
-            </Typography>
+            </Typography> */}
           </Box>
 
           <Box sx={{ mb: 6 }}>
@@ -210,7 +220,7 @@ const LoginPage = () => {
             >
               <FormControlLabel control={<Checkbox />} label='Remember Me' />
 
-              <LinkStyled passHref href='/' onClick={e => e.preventDefault()}>
+              <LinkStyled passHref href='/pages/register' onClick={e => e.preventDefault()}>
                 Forgot Password?
               </LinkStyled>
             </Box>
@@ -220,7 +230,7 @@ const LoginPage = () => {
               size='large'
               variant='contained'
               sx={{ marginBottom: 7 }}
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/dashboard')}
             >
               Login
             </Button>

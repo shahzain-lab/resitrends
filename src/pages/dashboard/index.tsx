@@ -51,19 +51,19 @@ export default function Dashboard() {
             <Grid container spacing={6}>
               <Grid item xs={6}>
                 <CardStatisticsVerticalComponent
-                  stats='$25.6k'
+                  stats='10%'
                   icon={<Poll />}
                   color='success'
                   trendNumber='+42%'
-                  title='Total Profit'
-                  subtitle='Weekly Profit'
+                  title='Total Construction Process'
+                  subtitle=''
                 />
               </Grid>
 
               <Grid item xs={6}>
                 <CardStatisticsVerticalComponent
-                  stats='$78'
-                  title='Refunds'
+                  stats='$32M'
+                  title='Total Money Spend'
                   trend='negative'
                   color='secondary'
                   trendNumber='-15%'
@@ -77,7 +77,7 @@ export default function Dashboard() {
                   stats='862'
                   trend='negative'
                   trendNumber='-18%'
-                  title='New Project'
+                  title='People Worked'
                   subtitle='Yearly Project'
                   icon={<BriefcaseVariantOutline />}
                 />
@@ -85,12 +85,12 @@ export default function Dashboard() {
 
               <Grid item xs={6}>
                 <CardStatisticsVerticalComponent
-                  stats='15'
+                  stats='90%'
                   color='warning'
                   trend='negative'
                   trendNumber='-18%'
-                  subtitle='Last Week'
-                  title='Sales Queries'
+                  subtitle=''
+                  title='Percentage Of Completion'
                   icon={<HelpCircleOutline />}
                 />
               </Grid>

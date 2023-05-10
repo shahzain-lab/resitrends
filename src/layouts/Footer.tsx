@@ -1,41 +1,49 @@
 import React from 'react'
-import { Flex, Heading, UnorderedList, ListItem, Stack, Button, Input, Textarea } from '@chakra-ui/react'
+import { Flex, Heading, UnorderedList, ListItem, Stack, Button, Input, Textarea, Divider, Icon } from '@chakra-ui/react'
 import Image from '@/views/Customs/Image'
-
+ import {  AiOutlineInstagram } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <Flex justifyContent={'space-between'} py={6} px={10}> 
-        <Flex px={16} alignItems='center'>
+    <Flex flexDirection={{base: 'column', lg: 'row'}} justifyContent={'space-between'} py={6} px={10}> 
+        <Flex px={16} flexDirection={'column'} justifyContent={'center'} alignItems='center'>
         <Image
             src='/assets/home/logo.webp'
             alt='Dan Abramov'
             width={167}
             height={91}
               />
+
+              <Divider />
+
+              <Icon
+              as={AiOutlineInstagram}
+              target='_blank'
+              href={'https://www.linkedin.com/company/resitrend/'}
+            />
         </Flex>
 
         <Stack>
-            <Heading>Our Locations</Heading>
+            <Heading size={'md'}>Company</Heading>
 
-            <Flex pt={4} justifyContent={'space-between'}>
+            <Flex pt={4} wrap={'wrap'} justifyContent={'space-between'}>
             <UnorderedList>
                 {locations.slice(0, 7).map((loc) => (
-                    <ListItem key={loc}>{loc}</ListItem>
+                    <ListItem py={.5} _hover={{color: 'brand.primary'}} cursor={'pointer'} key={loc}>{loc}</ListItem>
                     ))}
               </UnorderedList>
+            </Flex>
+        </Stack>
 
-              <UnorderedList px={20}>
-                {locations.slice(7, 14).map((loc) => (
-                    <ListItem key={loc}>{loc}</ListItem>
-                ))}
-                </UnorderedList>
+        <Stack>
+            <Heading size={'md'}>Product</Heading>
 
-              <UnorderedList>
-                {locations.slice(14).map((loc) => (
-                    <ListItem key={loc}>{loc}</ListItem>
-                ))}
-            </UnorderedList>
+            <Flex pt={4} wrap={'wrap'} justifyContent={'space-between'}>
+            <UnorderedList>
+                {locations.slice(8).map((loc) => (
+                    <ListItem  py={.5} _hover={{color: 'brand.primary'}} cursor={'pointer'} key={loc}>{loc}</ListItem>
+                    ))}
+              </UnorderedList>
             </Flex>
         </Stack>
 
@@ -59,24 +67,25 @@ const Footer = () => {
 export default Footer
 
 const locations = [
-     'Las Vegas, Nevada',
-     'Henderson, Nevada',
-     'Salt Lake City, Utah',
-     'Northern, Utah',
-     'Dallas, Texas',
-     'Austin, Texas',
-     'San Antonio, Texas',
-     'San Diego, California',
-     'Riverside, California',
+     '(111) 123-4567',
+     'support@resitrend.com',
+     'About',
+     'News',
+     'Careers',
+     'Social Impact',
+     'Write For US',
+     'Pricing',
+     'Sale Process',
      'Los Angeles, California',
      'Jacksonville, Florida',
-     'Tampa, Florida',
-     'Orlando, Florida',
-     'Phoenix, Arizona',
-     'Nashville, Tennessee',
-     'Chattanooga, Tennessee',
-     'Knoxville, Tennessee',
-     'Cincinnati, Ohio',
-     'Columbus, Ohio',
-     'Kansas'
+     'Financial Tools',
+     'Communication',
+     'Project Management',
+     'Additional Services',
+
+    //  'Chattanooga, Tennessee',
+    //  'Knoxville, Tennessee',
+    //  'Cincinnati, Ohio',
+    //  'Columbus, Ohio',
+    //  'Kansas'
 ]

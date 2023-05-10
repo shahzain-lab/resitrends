@@ -4,8 +4,8 @@
   "license": "MIT",
   "version": "1.0.0",
   "author": {
-    "name": "ThemeSelection",
-    "url": "https://themeselection.com/"
+    "name": "Resitrend",
+    "url": "https://resitrend.com/"
   },
   "bugs": {
     "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free/issues"
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free.git"
   },
-  "homepage": "https://themeselection.com/products/materio-free-mui-react-nextjs-admin-template/",
+  "homepage": "https://resitrend.com/products/materio-free-mui-react-nextjs-admin-template/",
   "keywords": [
     "react",
     "javascript",
@@ -53,6 +53,7 @@
     "@mui/material": "^5.11.2",
     "@popperjs/core": "^2.11.6",
     "apexcharts-clevision": "3.28.5",
+    "chakra-ui-steps": "^2.1.0",
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.8",
     "mdi-material-ui": "^7.6.0",

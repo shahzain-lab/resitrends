@@ -12,13 +12,13 @@ import { BsArrowRight } from 'react-icons/bs'
 
 const Services = () => {
   return (
-    <Stack py={10}>
-        <Center display={'flex'} flexDirection='column'>
-        <Heading pb={16}>
+    <Stack>
+     <Center display={'flex'} flexDirection='column'>
+        <Heading pb={{base: 20, lg: 16}} px={{base: 4, lg: 0}}>
            Everything you need to get ahead
         </Heading>
 
-        <SimpleGrid mb={24} p={6} columns={2} gap={6}>
+        <SimpleGrid mb={{base: 14, lg: 24}} p={{base: 4, lg: 6}} columns={{base: 1, lg: 2}} gap={6}>
             <Box 
               position={'relative'}
               display={'flex'}
@@ -34,12 +34,13 @@ const Services = () => {
                 />
 
                 <Image
-                  src={'/assets/home/4156512.png'}
+                  src={'/assets/home/admin1.png'}
                   alt="mockup"
                   position='absolute'
-                  right={20}
+                  right={{base: 5, lg: 20}}
+                  top={{base: -16, lg: 0}}
                   width={200}
-                  height={150}
+                  height={120}
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
             </Box>
@@ -86,8 +87,8 @@ const Services = () => {
             </Box>
         </SimpleGrid>
 
-        <SimpleGrid p={6} columns={2} gap={6}>
-            <Box pl={10}>
+        <SimpleGrid p={{base: 4, lg: 6}} columns={{base: 1, lg: 2}} gap={6}>
+            <Box pl={{base: 0, lg: 10}}>
                 {features.slice(2).map((feat, i) => (
                     <Flex 
                     key={i}
@@ -129,6 +130,7 @@ const Services = () => {
             </Box>
 
             <Box 
+             gridColumnStart={1} gridRowStart={1} 
               position={'relative'}
               display={'flex'}
               justifyContent={'center'}
@@ -138,22 +140,24 @@ const Services = () => {
                   alt="feature 1"
                   width={400}
                   height={300}
+                  ml={{base: 0, '3xl': '165px'}}
                   borderRadius={'10px'}
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
 
                 <Image
-                  src={'/assets/home/3152837.png'}
+                  src={'/assets/home/admin2.png'}
                   alt="mockup"
                   position='absolute'
-                  right={20}
                   width={200}
-                  height={150}
+                  right={{base: 5, lg: 20}}
+                  top={{base: -16, lg: 0}}
+                  height={120}
                   boxShadow={'2px 2px 5px -1px rgba(0,0,0,0.41)'}
                 />
             </Box>
         </SimpleGrid>
-        </Center>
+    </Center>
     </Stack>
   )
 }

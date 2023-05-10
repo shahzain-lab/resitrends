@@ -12,8 +12,8 @@ import Typography, { TypographyProps } from '@mui/material/Typography'
 // ** Type Import
 import { Settings } from 'src/@core/context/settingsContext'
 
-// ** Configs
-import themeConfig from 'src/configs/themeConfig'
+// ** Custom Image
+import Image from '@/views/Customs/Image'
 
 interface Props {
   hidden: boolean
@@ -59,8 +59,16 @@ const VerticalNavHeader = (props: Props) => {
       {userVerticalNavMenuBranding ? (
         userVerticalNavMenuBranding(props)
       ) : (
-        <LinkStyled href="/" passHref>
-          <svg
+        <LinkStyled href="/dashboard" passHref>
+          <Image
+            src="/assets/home/logo.webp"
+            alt="Resitrends dashboard"
+            width={140}
+            height={80}
+            mt={6}
+          />
+
+          {/* <svg
             width={30}
             height={25}
             version="1.1"
@@ -124,11 +132,11 @@ const VerticalNavHeader = (props: Props) => {
                 </g>
               </g>
             </g>
-          </svg>
+          </svg> */}
 
-          <HeaderTitle variant="h6" sx={{ ml: 3 }}>
+          {/* <HeaderTitle variant="h6" sx={{ ml: 3 }}>
             {themeConfig.templateName}
-          </HeaderTitle>
+          </HeaderTitle> */}
         </LinkStyled>
       )}
     </MenuHeaderWrapper>

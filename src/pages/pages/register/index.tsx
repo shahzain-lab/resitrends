@@ -29,14 +29,15 @@ import Facebook from 'mdi-material-ui/Facebook'
 import EyeOutline from 'mdi-material-ui/EyeOutline'
 import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
 
-// ** Configs
-import themeConfig from 'src/configs/themeConfig'
+// ** Custom Import
+import Image from '@/views/Customs/Image'
 
 // ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Demo Imports
 import FooterIllustrationsV1 from 'src/views/pages/auth/FooterIllustration'
+import { useRouter } from 'next/router'
 
 interface State {
   password: string
@@ -72,6 +73,7 @@ const RegisterPage = () => {
 
   // ** Hook
   const theme = useTheme()
+  const router = useRouter()
 
   const handleChange = (prop: keyof State) => (event: ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [prop]: event.target.value })
@@ -90,7 +92,15 @@ const RegisterPage = () => {
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
           <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg
+          
+          <Image
+            src="/assets/home/logo.webp"
+            alt="Resitrends dashboard"
+            width={140}
+            height={80}
+          />
+
+            {/* <svg
               width={35}
               height={29}
               version='1.1'
@@ -167,7 +177,7 @@ const RegisterPage = () => {
               }}
             >
               {themeConfig.templateName}
-            </Typography>
+            </Typography> */}
           </Box>
 
           <Box sx={{ mb: 6 }}>
@@ -220,7 +230,14 @@ const RegisterPage = () => {
               }
             />
 
-            <Button fullWidth size='large' type='submit' variant='contained' sx={{ marginBottom: 7 }}>
+            <Button 
+             fullWidth
+             size='large' 
+             type='submit' 
+             variant='contained' 
+             sx={{ marginBottom: 7 }}
+             onClick={() => router.push('/pages/login')}
+             >
               Sign up
             </Button>
 
